@@ -1,0 +1,20 @@
+<body>
+<script>
+function spoiler(i) {
+  function surround(s) {
+    return "||" + s + "||";
+  }
+  i = i.split("").map(surround).join("");
+  return i
+}
+function change() {
+ var newtext = spoiler(document.getElementById("text_to_be_changed").value);
+ document.getElementById("text_changed").value = newtext;
+}
+</script>
+<textarea id="text_to_be_changed"></textarea>
+<button onclick="change()">
+Do it
+</button>
+<textarea id="text_changed"></textarea>
+</body>
